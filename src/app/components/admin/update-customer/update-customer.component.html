@@ -1,0 +1,19 @@
+<form  #formInfo="ngForm">
+    <input type="email" placeholder="Email..." required name="email" [(ngModel)]="this.email"
+    #emailInfo=ngModel maxlength="35">                    
+    <span *ngIf="!emailInfo.valid && emailInfo.touched">Email is missing</span>
+    <br><br>
+
+    <input type="text" placeholder="Password..." required name="password" [(ngModel)]="this.password">
+    <!--#passwordInfo=ngModel maxlength="15"> 
+    <span *ngIf="passwordInfo.invalid && passwordInfo.touched">Password is missing</span>-->
+    <br><br>
+
+    <button [disabled]="!formInfo.form.valid" (click)="updateCustomer()">Update Customer</button>
+    <br>
+    <input type="reset"  value="reset form">
+</form>
+
+
+<br><br>
+<a routerLink="/admin" routerLinkActive="active-link">Back to Admin Service</a><br> 

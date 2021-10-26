@@ -1,0 +1,22 @@
+table{
+    margin: 30px auto;
+}
+
+table, th, td{
+    border: 1px blue;
+}
+
+tr:nth-child(even){
+    background-color: lightblue;
+}
+
+tr:nth-child(odd){
+    background-color: gray;
+}
+
+div{
+    /*right: 20px;
+    align-self: auto;*/
+    height: 80%;
+    overflow: auto;
+}

@@ -1,0 +1,26 @@
+<!--<app-thumbnail imageSource="assets/images/AdvertisingPolak.jpg" (imageClicked)=showImage($event)></app-thumbnail>    
+<app-thumbnail imageSource="assets/images/Infographic.jpg" (imageClicked)=showImage($event)></app-thumbnail><br>
+<app-thumbnail imageSource="assets/images/Newsletter.jpg" (imageClicked)=showImage($event)></app-thumbnail>    
+<app-thumbnail imageSource="assets/images/postcard.jpg" (imageClicked)=showImage($event)></app-thumbnail><br>-->
+<h3>This is the list of the companies</h3>
+<div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>password</th>
+           <!-- <th>image</th>-->
+        </tr>
+        <tr *ngFor="let comp of companies">
+            <td><a routerLink="/admin/get-One-Company/{{comp.id}}">{{comp.id}}</a></td>
+            <td>{{comp.name}}</td>
+            <td>{{comp.email}}</td>
+            <td>{{comp.password}}</td>
+            <!--<td><app-thumbnail imageSource="assets/images/{{comp.id}}.jpg"></app-thumbnail></td>-->
+        </tr>
+    </table>
+</div>
+
+<br><br>
+<a routerLink="/admin" routerLinkActive="active-link">Back to Admin Service</a><br> 

@@ -1,0 +1,23 @@
+<h3>This is the list of the customers</h3>
+<div>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>email</th>
+            <th>password</th>
+            <!--<th>couponsList</th>-->
+        </tr>
+        <tr *ngFor="let custom of customers">
+            <td><a routerLink="/admin/get-One-Customer/{{custom.id}}">{{custom.id}}</a></td>
+            <td>{{custom.firstName}}</td>
+            <td>{{custom.lastName}}</td>
+            <td>{{custom.email}}</td>
+            <td>{{custom.password}}</td>
+            <!--<td><a routerLink="admin/get-One-Customers/{{custom.id}}">{{custom.couponsList}}</a></td>-->
+        </tr>
+    </table>
+</div>
+<br><br>
+<a routerLink="/admin" routerLinkActive="active-link">Back to Admin Service</a><br> 

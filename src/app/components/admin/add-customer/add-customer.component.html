@@ -1,0 +1,27 @@
+<br><br>
+<form #formInfo="ngForm">
+    <input type="text" placeholder="First Name..." [(ngModel)]="customer.firstName" 
+    required name="firstName" #firstNameInfo=ngModel pattern="[A-Z].*$">
+    <!--<span *ngIf="firstNameInfo.invalid && firstNameInfo.touched">first name is missing</span>-->
+    <span *ngIf="firstNameInfo.errors?.required && firstNameInfo.touched">first name is missing</span>
+    <span *ngIf="firstNameInfo.errors?.pattern && firstNameInfo.touched">Name must start with a capital letter</span>
+    <br><br>
+    <input type="text" placeholder="Last Name..." [(ngModel)]="customer.lastName" 
+    required name="lastName" #lastNameInfo=ngModel pattern="[A-Z].*$">
+    <!--<span *ngIf="lastNameInfo.invalid && lastNameInfo.touched">last name is missing</span>-->
+    <span *ngIf="lastNameInfo.errors?.required && lastNameInfo.touched">last name is missing</span>
+    <span *ngIf="lastNameInfo.errors?.pattern && lastNameInfo.touched">Name must start with a capital letter</span>
+    <br><br>
+    <input type="text" placeholder="email..." [(ngModel)]="customer.email"
+     required name="email" #emailInfo=ngModel>
+    <span *ngIf="emailInfo.invalid && emailInfo.touched">email is missing</span>
+    <br><br>
+    <input type="text" placeholder="password..." [(ngModel)]="customer.password"
+     required name="password" #passwordInfo=ngModel>
+     <span *ngIf="passwordInfo.invalid && passwordInfo.touched">password is missing</span>
+</form>
+
+<br><br>
+<button [disabled]="!formInfo.form.valid" (click)="addCustomer()">Add Customer</button>
+<br><br><br>
+<a routerLink="/admin">Back to admin service</a>

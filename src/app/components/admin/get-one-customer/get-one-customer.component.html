@@ -1,0 +1,12 @@
+<h4>customer's details</h4>
+<div *ngIf="customer">
+<h5>ID: {{customer.id}}</h5>
+<h5>First name: {{customer.firstName}}</h5>
+<h5>Last name: {{customer.lastName}}</h5>
+<h5>Email: {{customer.email}}</h5>
+<h5>Password: {{customer.password}}</h5>
+<h5>Coupons List: {{customer.couponsList}}</h5>
+</div>
+
+<a routerLink="/admin/get-All-Customers">Back to the list of customers</a><br>
+<a routerLink="/admin">Back to admin service</a>

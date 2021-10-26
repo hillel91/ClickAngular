@@ -1,0 +1,16 @@
+input, button{
+    width: 300px;
+    font-size: large;
+    margin: 10px;
+}
+
+form{
+    margin-top: 50px;
+}
+
+span{
+    color: red;
+    margin: 10px;
+    position: absolute;
+    font-size: large;
+}

@@ -1,0 +1,16 @@
+<p>delete-customer works!</p>
+
+<form #formInfo="ngForm">
+    <input type="number" placeholder="customer ID..." required name="id" [(ngModel)]="id"
+    #idInfo=ngModel min="0" pattern="^[0-9].*$">
+
+    <!--<span *ngIf="idInfo.invalid && idInfo.touched">Number ID is missing</span>-->
+    <br><br>
+   <button (click)="deleteCustomer()">Delete Customer</button>
+    <br>
+</form>
+
+<br><br>
+<a routerLink="/admin" routerLinkActive="active-link">Back to Admin Service</a><br> 
+<!-- --[disabled]="!idInfo.form.valid"-->
+
